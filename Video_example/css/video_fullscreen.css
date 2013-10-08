@@ -1,0 +1,159 @@
+
+
+#videocontainer
+{
+	position: absolute;
+	z-index: 0;
+}
+
+#playcontrols
+{
+ position: absolute;  
+ display:none;
+}
+
+#video_duration
+{
+	position: absolute;
+	z-index: 2;
+	color: white;
+	font-size:18px;
+	width:800px;
+	height:50px;
+	top: 535px;
+	left: 960px;	
+}
+
+#base
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) 0px 0px;
+width:950px;
+height:168px;
+z-index: 1;
+top: 500px;
+left: 155px;
+}
+
+#stop
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) 0px -500px;
+width:100px;
+height:80px;
+top: 580px;
+left: 175px;
+z-index: 2;
+nav-right: #rewind;
+nav-left:#stop;
+nav-up:#stop;
+nav-down:#stop;
+}
+
+#rewind
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) -88px -500px;
+width:100px;
+height:80px;
+top: 580px;
+left: 260px;
+z-index: 2;
+nav-right: #play;
+nav-left:#stop;
+nav-up:#rewind;
+nav-down:#rewind;
+}
+
+#play
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) -175px -500px;
+width:100px;
+height:80px;
+top: 580px;
+left: 350px;
+z-index: 2;
+nav-right: #pause;
+nav-left:#rewind;
+nav-up:#play;
+nav-down:#play;
+}
+
+#pause
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) -260px -500px;
+width:100px;
+height:80px;
+top: 580px;
+left: 440px;
+z-index: 2;
+nav-right: #forward;
+nav-left:#play;
+nav-up:#pause;
+nav-down:#pause;
+}
+
+#forward
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) -350px -500px;
+width:100px;
+height:80px;
+top: 580px;
+left: 530px;
+z-index: 2;
+nav-right:#qmenu;
+nav-left:#pause;
+nav-up:#forward;
+nav-down:#forward;
+}
+
+#black_bar
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) 0px -680px;
+width:800px;
+height:50px;
+top: 505px;
+left: 185px;
+z-index: 2;
+}
+
+#filled_bar
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) 0px -620px;
+width:0px;
+height:50px;
+top: 505px;
+left: 185px;
+z-index: 3;
+}
+
+#qmenu
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) -570px -500px;
+width:100px;
+height:80px;
+top: 580px;
+left: 970px;
+z-index: 2;
+nav-right:#qmenu;
+nav-left:#forward;
+nav-up:#qmenu;
+nav-down:#qmenu;
+}
+
+#circle
+{
+position: absolute;
+background:url(../images/Movieplayer_Assets_Sprite.png) -450px -500px;
+width:90px;
+height:70px;
+top: 510px;
+left: 160px;
+z-index: 4;
+}

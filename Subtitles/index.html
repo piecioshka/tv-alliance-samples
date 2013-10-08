@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Download popcorn-complete.js or popcorn-complete-min.js from http://popcornjs.org/download -->
+    <!-- You must change the default font size (for now) inside popcorn-complete.js: createDefaultContainer()->updatePosition()->style.fontSize = "18px"; becomes style.fontSize = "18pt"; or more -->
+    <script src="popcorn-complete.js"></script>
+  <script>
+  function init()
+  {
+     var myvideo = document.getElementById('myvideo');
+     myvideo.src="video.mp4";
+     myvideo.play();
+  }
+
+  function myonerror(message, location, line, col)
+  {
+    document.write("Error<br/>"+message+"<br/>Location:"+location+"<br/>Line/col:"+line+":"+col);
+  }
+
+this.onerror=myonerror;
+
+</script></head>
+  <body style="width:1280px;height:720px;margin:0px;overflow:hidden;background-color:white;" onload="init();">
+<video width="1280" height="720" id="myvideo" controls="controls" data-timeline-sources="./data.ttml"></video>
+</body>
+</html>

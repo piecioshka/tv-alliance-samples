@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Example</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/video_fullscreen.css" type="text/css">
+ 
+<script src="js/smarttv_getplatform.js"></script>
+<script src="js/lg_keyconstants.js"></script>
+
+<script type="text/javascript"> 
+// CHANGEME: this indicates where you can change the code for your specific use case
+
+var select_stop=0, select_play=0, select_rewind=0, select_forward=0, select_pause=0, select_qmenu=0,select_circle=0, init_ok=0;
+var t_playcontrol,t_testforward, t_testrewind, t_skip, t_timeupdate;
+var is_playing=0, is_ended=0;
+var duration_index=0, slice_time=0, total_duration=0;
+var slide_circle=0;
+
+// CHANGEME: timeout for hiding the play control screen
+var pctimeout=3000;
+
+/* init : register event handlers, set timers, initialize play state */
+function init(partial)
+{
+	if (!partial)
+		{
+			document.addEventListener("keydown", keydownhandler, true);
+			if (myplatform["manufacturer"] == "LG")
+			{
+				if (myplatform["type"].search(/NetCast.Media/i) == -1)
+				{
+				  qmenu = document.createElement('a');
+				  qmenu.setAttribute('id', 'qmenu');
+				  qmenu.setAttribute('href', "javascript:func_click('qmenu','-570px', '-240px')");
+				  document.getElementById('playcontrols').insertBefore(qmenu, document.getElementById('playcontrols').firstChild);
+				  qmenu.onclick = function() { func_click('qmenu','-570px', '-240px'); }
+				  qmenu.onfocus = function() { this.onmouseover(); }
+				  qmenu.onblur = function() { this.onmouseout(); }
+				  qmenu.onmouseover = function() { func_mouseover('qmenu','-570px', '-368px'); }
+				  qmenu.onmouseout = function() { func_mouseout('qmenu','-570px','-500px'); }
+				  document.getElementById("forward").style.navRight="#qmenu";
+				}
+			}
+		}
+
+	document.getElementById('playcontrols').style.display="block";
+	document.getElementById('stop').focus();
+  
+	select_stop=1;
+	select_play=select_rewind=select_forward=select_pause=0;
+	is_playing=0;
+  
+	func_click('stop','0px', '-240px');
+  
+	document.getElementById('myvideo').addEventListener("timeupdate", timeupdatehandler, true);
+	document.getElementById('myvideo').addEventListener("durationchange", durationchangehandler, true);
+	clearInterval(t_timeupdate);
+	t_timeupdate=setInterval(function(){timeupdatehandler();}, 1000);  
+}
+
+
+function clear_playcontrol()
+{
+	document.getElementById('playcontrols').style.display="none"; 
+}
+
+
+function block_display()
+{
+	if (document.getElementById('playcontrols').style.display != "block")
+	{
+		document.getElementById('playcontrols').style.display="block";      
+	}
+}
+
+function keydownhandler(e)
+{ 
+	clearTimeout(t_playcontrol);
+	switch (e.keyCode) 
+	{ 
+		case VK_ENTER:
+			if (document.getElementById('playcontrols').style.display != "block")
+			{
+				block_display();
+				func_mouseover('play','-175px', '-370px');
+				document.getElementById('play').focus();
+				t_playcontrol=setTimeout("clear_playcontrol()",pctimeout);
+			}
+			break;
+		case VK_PLAY: 
+			block_display();
+			func_click('play','-175px', '-240px');
+			t_playcontrol=setTimeout("clear_playcontrol()",pctimeout);
+			break;
+		case VK_PAUSE: 
+			block_display();
+			func_click('pause','-260px', '-240px');
+			break;
+		case VK_STOP:
+			block_display();      
+			func_click('stop','0px', '-240px');
+			break;
+		case VK_REWIND:
+			block_display();
+			func_click('rewind','-88px', '-240px');
+			break;
+		case VK_FAST_FWD:
+			block_display();        
+			func_click('forward','-350px', '-240px');
+			break;
+		default: 
+			break; 
+	} 
+}
+ 
+ 
+ /* got_clicked : actions after playcontrol operation */
+function got_clicked(id)
+{
+	clearTimeout(t_playcontrol);
+	switch(id)
+	{
+		case 'stop':
+			init_ok=0;
+			if (is_playing == 1)
+			{ 
+				select_stop=1;
+				select_play=select_rewind=select_forward=select_pause=select_qmenu=0; 
+				document.getElementById('playcontrols').style.display="block";
+				document.getElementById('myvideo').currentTime=0;
+				var ct = document.getElementById('myvideo').currentTime;
+				document.getElementById('position').innerHTML = parseTime(ct);
+				document.getElementById('myvideo').pause();
+				document.getElementById('circle').style.left = "160px";
+				document.querySelector('#filled_bar').style.width = "0px";
+				init(true);
+				return 1;
+			}
+			break;
+		case 'rewind': 
+			if ((is_playing == 1) && (select_pause!=1) && (select_stop!=1) && (select_rewind!=1))
+			{
+				clearInterval(t_skip);
+				select_rewind=1;
+				select_play=select_stop=select_forward=select_pause=select_qmenu=0;
+				document.getElementById("myvideo").pause();
+				// CHANGEME: Playback rate for rewind
+				t_skip = window.setInterval(function(){doskip("myvideo",-2.0);}, 1000);
+				return 1;
+			}
+			break;
+		case 'play': 
+			if (is_playing==0)
+			{
+				// CHANGEME: your video here
+				document.getElementById('myvideo').src="video/logo.mp4";
+				slide_circle = 0;
+			}
+			
+			t_playcontrol=setTimeout("clear_playcontrol()",pctimeout);
+			select_play=1;
+			is_playing=1;	  
+			clearInterval(t_skip);      
+			document.getElementById('myvideo').play();
+			select_stop=select_rewind=select_forward=select_pause=select_qmenu=0;       
+			init_ok=1;
+			if(slide_circle >= 870)     
+				slide_circle = 0;
+			return 1;
+			break;
+		case 'pause': 
+			if (is_playing == 1 && (select_stop!=1))
+			{
+				select_pause=1;       
+				clearInterval(t_skip);       
+				select_play=select_rewind=select_stop=select_qmenu=select_forward=0;
+				document.getElementById('myvideo').pause();
+				return 1;
+			}
+			break;
+		case 'forward': 
+			if ((is_playing == 1) && (select_pause!=1) && (select_stop!=1) && (select_forward!=1))
+			{
+				clearInterval(t_skip);       
+				select_forward=1;
+				select_play=select_rewind=select_stop=select_pause=select_qmenu=0;
+				document.getElementById("myvideo").pause(); 
+				// CHANGEME:Playback rate for ffwd
+				t_skip = window.setInterval(function(){doskip("myvideo",2.0);} , 1000); 
+				return 1;
+			}
+			break;
+		case 'qmenu':
+			if ((is_playing == 1) && (select_pause!=1) && (select_stop!=1))
+			{
+				t_playcontrol=setTimeout("clear_playcontrol()",pctimeout);
+				select_qmenu=1;
+				select_play=select_rewind=select_stop=select_pause=select_forward=0;
+				if (myplatform["manufacturer"] == "LG")  
+				{
+				  window.NetCastLaunchQMENU();
+				}
+				return 1;
+			}
+			break;
+		default: 
+			break; 
+	}
+}
+
+/* doskip : adjusting time after forward and rewind */
+function doskip(videoid,skiptime)
+{ 
+	var ct = document.getElementById(videoid).currentTime;
+	if (( (ct + skiptime) < total_duration) && ((ct + skiptime) > 0))
+	{
+		document.getElementById(videoid).currentTime+=skiptime; 
+	}
+	else
+	{
+		clearInterval(t_skip);
+		block_display();
+		func_click('stop','0px', '-240px');
+		document.getElementById('stop').focus();	
+	} 
+}
+
+/* is_clicked : is the playcontrols button clicked? */
+function is_clicked(id)
+{
+	switch(id)
+	{
+		case 'stop': 
+			return (select_stop==1) ? 1 : 0;
+			break;
+		case 'rewind': 
+			return (select_rewind==1) ? 1 : 0;
+			break;
+		case 'play': 
+			return (select_play==1) ? 1 : 0;
+			break;
+		case 'pause': 
+			return (select_pause==1) ? 1 : 0;
+			break;
+		case 'forward':
+			return (select_forward==1) ? 1 : 0;
+			break;
+		case 'qmenu':
+			return (select_qmenu==1) ? 1 : 0;
+			break;
+		case 'circle':
+			return (select_circle==1) ? 1 : 0;
+			break;
+		default: 
+			break; 
+	}
+}
+
+function func_mouseover(id, left, top)
+{
+	if(is_clicked(id) == 0)
+		document.getElementById(id).style.background= "url('images/Movieplayer_Assets_Sprite.png') "+left+" "+top;
+}
+ 
+function func_mouseout(id, left, top)
+{ 
+	if(is_clicked(id) == 0)
+		document.getElementById(id).style.background= "url('images/Movieplayer_Assets_Sprite.png') "+left+" "+top;
+}
+ 
+ 
+/* func_click : mouseover, click effects on playcontrol buttons */
+function func_click(id, left, top)
+{ 
+	if(got_clicked(id) == 1)
+	{
+		if(id != 'qmenu')
+		{
+			func_mouseover('stop','0px','-500px');
+			func_mouseover('rewind','-88px','-500px');
+			func_mouseover('play','-175px','-500px');
+			func_mouseover('pause','-260px','-500px');
+			func_mouseover('forward','-350px','-500px');
+			func_mouseover('qmenu','-570px','-500px');
+		}
+    document.getElementById(id).focus();
+    document.getElementById(id).style.background= "url('images/Movieplayer_Assets_Sprite.png') "+left+" "+top;
+	}
+}
+
+function pc_mouseover()
+{
+	clearTimeout(t_playcontrol);
+}
+ 
+function pc_mouseout()
+{
+	if (init_ok!=1 && select_stop!=1 && select_rewind !=1 && select_forward!=1 )
+	{
+		t_playcontrol=setTimeout("clear_playcontrol()",pctimeout);
+	}
+}
+
+/* timeupdatehandler : indicates current play time */
+function timeupdatehandler() 
+{
+	if (is_playing==1)
+	{
+		var ct = document.getElementById('myvideo').currentTime;
+    	document.getElementById('position').innerHTML = parseTime(ct);
+		slice_time=23+ Math.round(ct) *duration_index-3;
+		document.querySelector('#filled_bar').style.width = slice_time+"px";
+		if(slide_circle <= 870)
+		{
+			slide_circle = 160 + Math.round(ct) *duration_index-3;
+			document.getElementById('circle').style.left = slide_circle+"px";
+		}  
+	}
+}
+
+function durationchangehandler() 
+{
+	total_duration = document.getElementById('myvideo').duration;
+	duration_index = Math.floor(790/total_duration);
+	document.querySelector('#duration').innerHTML = parseTime(total_duration);
+}
+
+function parseTime(t)
+{
+	t = Math.round(t);
+	var s = t % 60;
+	var m = Math.floor(t / 60);
+  
+	return pad(m) + ':' + pad(s);
+}
+
+function pad(s) 
+{
+	s += "";
+	if (s.length < 2) 
+		s = "0" + s;
+	
+	return s;
+}
+
+function mouseclick()
+{
+	block_display();
+	t_playcontrol=setTimeout("clear_playcontrol()",pctimeout);
+}
+
+</script>
+</head>
+<body onload="init(false);" style="width:1280px;height:720px;overflow:hidden;margin:0px;"  >
+<div id="videocontainer">
+	<video width="1280" height="720" tabindex="0"  id="myvideo"  onmousedown="mouseclick()"  >
+	</video>
+</div>
+<div id="playcontrols" onmouseover="pc_mouseover()" onmouseout="pc_mouseout()">
+	<div id="base"></div>
+	<div id="video_duration">
+		<span id="position">00:00</span> / <span id="duration">00:00</span>
+	</div>
+	<a id="stop" href="javascript:func_click('stop','0px', '-240px');" onfocus="this.onmouseover();" onblur="this.onmouseout();" onmouseover="func_mouseover('stop','0px', '-370px')" onmouseout="func_mouseout('stop','0px','-500px')"></a>
+	<a id="rewind" href="javascript:func_click('rewind','-88px', '-240px')" onfocus="this.onmouseover();" onblur="this.onmouseout();" onmouseover="func_mouseover('rewind','-88px', '-370px')" onmouseout="func_mouseout('rewind','-88px','-500px')"></a>
+	<a id="play" href="javascript:func_click('play','-175px', '-240px')" onfocus="this.onmouseover();" onblur="this.onmouseout();" onmouseover="func_mouseover('play','-175px', '-370px')" onmouseout="func_mouseout('play','-175px','-500px')"></a>
+	<a id="pause" href="javascript:func_click('pause','-260px', '-240px')" onfocus="this.onmouseover();" onblur="this.onmouseout();" onmouseover="func_mouseover('pause','-260px', '-370px')" onmouseout="func_mouseout('pause','-260px','-500px')"></a>
+	<a id="forward" href="javascript:func_click('forward','-350px', '-240px')" onfocus="this.onmouseover();" onblur="this.onmouseout();" onmouseover="func_mouseover('forward','-350px', '-370px')" onmouseout="func_mouseout('forward','-350px','-500px')"></a>
+	<div id="black_bar"></div>
+	<div id="filled_bar"></div>
+	<div id="circle" onmouseover="func_mouseover('circle','-450px', '-370px')" onmouseout="func_mouseout('circle','-450px','-500px')"></div>
+</div>
+</body>
+</html>

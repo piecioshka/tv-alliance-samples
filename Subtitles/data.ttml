@@ -1,0 +1,23 @@
+<tt xmlns:tts="http://www.w3.org/2006/04/ttaf1#styling" xmlns="http://www.w3.org/2006/04/ttaf1">
+<body region="subtitleArea">
+  <div>
+    <p xml:id="subtitle1" begin="0.50s" end="2.5s">
+      Test subtitle 1
+    </p>
+    <p xml:id="subtitle2" begin="3.0s" end="5.0s">
+      Test subtitle 2
+    </p>
+    <p xml:id="subtitle3" begin="5.5s" end="8.5s" >
+      Test subtitle 3a<br/>
+      Test subtitle 3b
+    </p>
+    <p xml:id="subtitle4" begin="9.5s" end="12.0s">
+      Test subtitle 4
+    </p>
+    <p xml:id="subtitle5" begin="13.0s" end="15.0s">
+      Test subtitle 5
+    </p>
+  </div>    
+</body>
+</tt>
+

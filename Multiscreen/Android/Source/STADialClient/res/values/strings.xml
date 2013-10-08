@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="listview_title">Select DIAL Server</string>
+    <string name="app_name">STA Dial Client</string>
+    <string name="refresh">Refresh</string>
+
+</resources>

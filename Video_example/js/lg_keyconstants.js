@@ -1,7 +1,8 @@
 // using smarttv_getplatform.js
 var myplatform = smarttv_getPlatform();
 
-if (myplatform["manufacturer"] == "LG")
+var userAgent = navigator.userAgent;
+if (userAgent.search(/NetCast.TV/i) > -1)
 {
   var VK_ENTER    =  13; 
   var VK_PAUSE    =  19; 

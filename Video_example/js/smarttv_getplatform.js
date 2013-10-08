@@ -1,20 +1,34 @@
 // parameters: none
 // returns: associative array
-// smarttv_platform["manufacturer"] = manufacturer name
-// smarttv_platform["type"] = type name (e.g. NetCast.TV-2012)
-// smarttv_platform["ua"] = full user agent string
-// smarttv_platform["version" = smart tv specification version (e.g. 2.0)
+// smarttv_platform["manufacturer"] = manufacturer name - for STA 2.5+ platforms, this variable is set to Smart TV Alliance
+// smarttv_platform["type"] = type name (e.g. NetCast.TV-2013 - for STA 2.5+ platforms, this variable is filled with the full UA string)
+// smarttv_platform["ua"] = full user agent string 
+// smarttv_platform["version"] = smart tv specification version (e.g. 2.0) - for STA 2.5+ platforms, this variable is equal to the version number part of the "SmartTvA/X.Y.Z" string (e.g. 2.5.0)
 function smarttv_getPlatform ()
 {
-  var userAgent = new String(navigator.userAgent);
-  var smarttv_platform = new Array();
+  /*jshint sub: true */
+  var userAgent = navigator.userAgent;
+  var smarttv_platform = [];
   smarttv_platform["ua"] = userAgent;
   smarttv_platform["manufacturer"] = "unknown";
   smarttv_platform["type"] = "unknown";
   smarttv_platform["version"] = "unknown";
   var substr_pos;
+   
+  // check if this is a Smart TV Alliance 2.5+ compliant platform
+  substr_pos=userAgent.search(/SmartTvA/i);
+  if (substr_pos > -1)
+  {
+    // this is a Smart TV Alliance 2.5+ compliant platform with a new UA identification
+    smarttv_platform["type"]=userAgent;
+    smarttv_platform["manufacturer"]="Smart TV Alliance";
+    smarttv_platform["version"]=userAgent.substr(substr_pos+9,5);
+    return smarttv_platform;
+  }
 
-  // first check if this is the Smart TV Alliance SDK
+  // for STA Specification 2.0 (or older) devices, the older identification method is used as shown below (this example is not exhaustive for all STA manufacturers): 
+
+  // check if this is the Smart TV Alliance SDK
   substr_pos=userAgent.search(/Chromium\/18/i);
   if (substr_pos > -1)
   {

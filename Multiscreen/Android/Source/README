@@ -1,0 +1,96 @@
+SDK-DIAL-CLIENT-ANDROID
+
+== INTRODUCTION ==
+
+This is the SmartTV Alliance SDK 2.5 DIAL Android Client application. It was
+developed according to the DIAL protocol specification 1.6.4
+(http://www.dial-multiscreen.org/).
+
+Its objective is to serve as a testing client for DIAL service implementation
+as well as a sample code for DIAL client implementations (for Android).
+It uses Cling library for doing DIAL services discovery via UPnP's SSDP
+protocol, as specified by DIAL.
+
+== USAGE ==
+
+The application is composed of 2 screens. The first one is presented when it is
+opened and should list the services found in the network.
+There is a 'Refresh' button on the bottom of the screen in case the user wants to
+force another DIAL service's search.
+
+Upon clicking on one of the listed services, the user is taken to another
+screen. At this one, it is possible to send the DIAL requests to the selected
+service. To do it, just type the name of the application and click on the
+corresponding button for the desired action.
+When sending the 'Start' request, the user can also add arguments filling
+the indicated text field.
+
+When performing the requests and reading the responses, the application
+will print information about the progress and data to the screen.
+
+== BUILD INSTRUCTIONS ==
+
+In order to build the project, you need to have a recent Android SDK installed on your system
+For this application v22.0.1-685705 was used. You can get the SDK from the URL:
+
+http://developer.android.com/sdk/index.html
+
+Once you have the SDK working, you have to get the source zip of sdk-dial-client-android
+and extract it somewhere (not inside the Android SDK workspace!). 
+
+Finally, import the source into Eclipse using File->Import->Android->Existing Android Code Into Workspace.
+That should work and enable you to build/test/customize and deploy the application from within the SDK.
+
+== PUBLISH TO ANDROID DEVICE VIA THE SDK ==
+
+In order to deploy to an Android device directly you have to get the
+device in debugging mode.
+
+To enable debugging mode, go to:
+Settings -> Developer Options ->
+Debugging -> USB debugging
+
+Note that If running a device with Android 4.2, you first need to
+reveal the developer options in order to enable debugging mode. See
+http://developer.android.com/about/versions/jelly-bean.html#42-dev-
+options for more details.
+
+Next, connect the device to your computer by USB cable. Now, when
+doing a "Run As" operation, you should be able to see the device in
+the "Choose a running Android device" dialog. The first time, the
+device might prompt you if you allow the application to be installed,
+you have to accept this in order for the actual installation to take
+place.
+
+== EXPORT TO ANDROID APPLICATION ==
+
+To export the application manually you have to follow these steps:
+
+1. File->Export->Android/Export Android Application
+2. Choose the Application STADialClient
+3. Unless you have your own Android Signing Key, you can use the android debug key, found
+in $HOME/.android/debug.keystore on Linux/MacOS X (use Windows->Preferences->Android->Build
+to find the location of the key on your Windows system).
+4. Use 'android' as password for the key and click 'Next'.
+5. Choose 'androiddebugkey' as Key Alias with 'android' as password and click next.
+6. Choose the location of the target Android .apk file and click Finish.
+
+More Information about signing Android applications and creating own keys can be found here:
+
+http://developer.android.com/tools/publishing/app-signing.html
+ 
+== INSTALL THE .apk APPLICATION DIRECTLY TO THE ANDROID DEVICE ==
+
+Assuming you already have the .apk file available and you want to copy it to an android device,
+first you have to copy it to the device's SD card from your PC. Afterwards, install one of the
+numerous available apk installers in the Play Store ("Apk Installer" seems like a good candidate)
+and run it. It *should* find the STADialClient.apk file on the SD card and install it, you have
+to accept installation as usual.
+
+== DISCLAIMER: This Application uses the Cling 1.x Library ==
+
+Cling is a UPnP-compatible software stack for Java environments.
+
+URL: http://4thline.org/projects/cling/
+
+License: LGPL v3 (included in the archive)

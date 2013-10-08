@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:upnpx/projects/xcode4/upnpx/upnpx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sdk-dial-client-ios/STADialClient.xcodeproj">
+   </FileRef>
+</Workspace>

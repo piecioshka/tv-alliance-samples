@@ -1,0 +1,44 @@
+SDK-DIAL-CLIENT-IOS
+
+== INTRODUCTION ==
+
+This is the SmartTV Alliance SDK 2.5 DIAL iOS Client application. It was
+developed according to the DIAL protocol specification 1.6.4
+(http://www.dial-multiscreen.org/).
+
+Its objective is to serve as a testing client for DIAL service implementation
+as well as a sample code for DIAL client implementations (for iOS).
+It uses upnpx library for doing DIAL services discovery via UPnP's SSDP
+protocol, as specified by DIAL.
+
+== USAGE ==
+
+The application is composed of 2 screens. The first one is presented when it is
+opened and should list the services found in the network.
+There is a 'Refresh' button on the top right corner in case the user wants to
+force another DIAL service's search.
+
+Upon clicking on one of the listed services, the user is taken to another
+screen. At this one, it is possible to send the DIAL requests to the selected
+service. To do it, just type the name of the application and click on the
+corresponding button for the desired action.
+When sending the 'Start' request, the user can also add arguments filling
+the indicated text field.
+
+When performing the requests and reading the responses, the application
+will print information about the progress and data to the screen.
+
+== BUILDING AND DEPLOYING ==
+
+sdk-dial-client-ios already ships upnpx's source code to make building easier.
+To build the project, double click the .xcworkspace file. It should open
+XCode. Check that the DialApp target is enabled on the top left corner, besides
+the Run and Stop buttons. Then, go to "Product -> Build" on the menu bar
+and it should build both upnpx sources and then the Dial App.
+
+Deploying should be done just like any other iOS application, it can be done
+both to the simulator or an iOS device. Simply set the iOS targeted device or
+simulator in XCode and click 'Run'. Note that in order to deploy applications
+to an iOS device the developer should be enrolled in the Apple's iOS
+developer program. More instructions can be found at
+https://developer.apple.com/programs/ios/

@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		756E1DE01766134D00A9C03E /* sta-icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E1DDF1766134D00A9C03E /* sta-icon-57.png */; };
+		756E1DE21766135100A9C03E /* sta-icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E1DE11766135100A9C03E /* sta-icon-114.png */; };
+		756E1DE41766135400A9C03E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E1DE31766135400A9C03E /* Default.png */; };
+		756E1DEC1766142700A9C03E /* sta-icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E1DEB1766142700A9C03E /* sta-icon-72.png */; };
+		756E1DEE1766142A00A9C03E /* sta-icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E1DED1766142A00A9C03E /* sta-icon-144.png */; };
+		756E1DF017662D5000A9C03E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E1DEF17662D5000A9C03E /* Default-568h@2x.png */; };
+		75A0A59D17658FCD00458B68 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0A59C17658FCD00458B68 /* libxml2.dylib */; };
+		75CCE62F17552BC800BA9F39 /* libupnpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CCE62E17552BC800BA9F39 /* libupnpx.a */; };
+		75CCE63117553B0400BA9F39 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CCE63017553B0400BA9F39 /* libstdc++.dylib */; };
+		75DB47361756746F00F577BF /* DialServiceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DB47351756746F00F577BF /* DialServiceProxy.m */; };
+		75E228E017540D83008ABEEF /* ServiceCommandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E228DF17540D83008ABEEF /* ServiceCommandsViewController.m */; };
+		75E228E617541417008ABEEF /* DialServiceDiscoveryClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75E228E517541417008ABEEF /* DialServiceDiscoveryClient.mm */; };
+		75E4CC97175384C1001FE307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E4CC96175384C1001FE307 /* UIKit.framework */; };
+		75E4CC99175384C1001FE307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E4CC98175384C1001FE307 /* Foundation.framework */; };
+		75E4CC9B175384C1001FE307 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E4CC9A175384C1001FE307 /* CoreGraphics.framework */; };
+		75E4CCA1175384C1001FE307 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E4CC9F175384C1001FE307 /* InfoPlist.strings */; };
+		75E4CCA3175384C1001FE307 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CCA2175384C1001FE307 /* main.m */; };
+		75E4CCA7175384C1001FE307 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CCA6175384C1001FE307 /* AppDelegate.m */; };
+		75E4CCB0175384C1001FE307 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E4CCAE175384C1001FE307 /* MainStoryboard_iPhone.storyboard */; };
+		75E4CCB3175384C1001FE307 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E4CCB1175384C1001FE307 /* MainStoryboard_iPad.storyboard */; };
+		75E4CCD617539639001FE307 /* ServerSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E4CCD517539639001FE307 /* ServerSelectionViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		756E1DDF1766134D00A9C03E /* sta-icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sta-icon-57.png"; path = "../sta-icon-57.png"; sourceTree = "<group>"; };
+		756E1DE11766135100A9C03E /* sta-icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sta-icon-114.png"; path = "../sta-icon-114.png"; sourceTree = "<group>"; };
+		756E1DE31766135400A9C03E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		756E1DEB1766142700A9C03E /* sta-icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sta-icon-72.png"; path = "../sta-icon-72.png"; sourceTree = "<group>"; };
+		756E1DED1766142A00A9C03E /* sta-icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sta-icon-144.png"; path = "../sta-icon-144.png"; sourceTree = "<group>"; };
+		756E1DEF17662D5000A9C03E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		75A0A59C17658FCD00458B68 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		75CCE62E17552BC800BA9F39 /* libupnpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libupnpx.a; path = "../../devel/upnpx/projects/xcode4/upnpx/build/Release-iphoneos/libupnpx.a"; sourceTree = "<group>"; };
+		75CCE63017553B0400BA9F39 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		75DB47341756746F00F577BF /* DialServiceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialServiceProxy.h; sourceTree = "<group>"; };
+		75DB47351756746F00F577BF /* DialServiceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialServiceProxy.m; sourceTree = "<group>"; };
+		75E228DE17540D83008ABEEF /* ServiceCommandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCommandsViewController.h; sourceTree = "<group>"; };
+		75E228DF17540D83008ABEEF /* ServiceCommandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCommandsViewController.m; sourceTree = "<group>"; };
+		75E228E417541417008ABEEF /* DialServiceDiscoveryClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialServiceDiscoveryClient.h; sourceTree = "<group>"; };
+		75E228E517541417008ABEEF /* DialServiceDiscoveryClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DialServiceDiscoveryClient.mm; sourceTree = "<group>"; };
+		75E4CC93175384C1001FE307 /* STADialClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STADialClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E4CC96175384C1001FE307 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		75E4CC98175384C1001FE307 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75E4CC9A175384C1001FE307 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		75E4CC9E175384C1001FE307 /* STADialClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "STADialClient-Info.plist"; sourceTree = "<group>"; };
+		75E4CCA0175384C1001FE307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75E4CCA2175384C1001FE307 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75E4CCA4175384C1001FE307 /* STADialClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STADialClient-Prefix.pch"; sourceTree = "<group>"; };
+		75E4CCA5175384C1001FE307 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		75E4CCA6175384C1001FE307 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		75E4CCAF175384C1001FE307 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		75E4CCB2175384C1001FE307 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		75E4CCBD175384C1001FE307 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		75E4CCD417539639001FE307 /* ServerSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerSelectionViewController.h; sourceTree = "<group>"; };
+		75E4CCD517539639001FE307 /* ServerSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerSelectionViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75E4CC90175384C1001FE307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0A59D17658FCD00458B68 /* libxml2.dylib in Frameworks */,
+				75CCE63117553B0400BA9F39 /* libstdc++.dylib in Frameworks */,
+				75CCE62F17552BC800BA9F39 /* libupnpx.a in Frameworks */,
+				75E4CC97175384C1001FE307 /* UIKit.framework in Frameworks */,
+				75E4CC99175384C1001FE307 /* Foundation.framework in Frameworks */,
+				75E4CC9B175384C1001FE307 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75E4CC8A175384C1001FE307 = {
+			isa = PBXGroup;
+			children = (
+				75E4CC9C175384C1001FE307 /* STADialClient */,
+				75E4CC95175384C1001FE307 /* Frameworks */,
+				75E4CC94175384C1001FE307 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75E4CC94175384C1001FE307 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75E4CC93175384C1001FE307 /* STADialClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75E4CC95175384C1001FE307 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75A0A59C17658FCD00458B68 /* libxml2.dylib */,
+				75CCE63017553B0400BA9F39 /* libstdc++.dylib */,
+				75CCE62E17552BC800BA9F39 /* libupnpx.a */,
+				75E4CC96175384C1001FE307 /* UIKit.framework */,
+				75E4CC98175384C1001FE307 /* Foundation.framework */,
+				75E4CC9A175384C1001FE307 /* CoreGraphics.framework */,
+				75E4CCBD175384C1001FE307 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75E4CC9C175384C1001FE307 /* STADialClient */ = {
+			isa = PBXGroup;
+			children = (
+				75E4CCA5175384C1001FE307 /* AppDelegate.h */,
+				75E4CCA6175384C1001FE307 /* AppDelegate.m */,
+				75E228E417541417008ABEEF /* DialServiceDiscoveryClient.h */,
+				75E228E517541417008ABEEF /* DialServiceDiscoveryClient.mm */,
+				75DB47341756746F00F577BF /* DialServiceProxy.h */,
+				75DB47351756746F00F577BF /* DialServiceProxy.m */,
+				75E4CCAE175384C1001FE307 /* MainStoryboard_iPhone.storyboard */,
+				75E4CCB1175384C1001FE307 /* MainStoryboard_iPad.storyboard */,
+				75E4CCD417539639001FE307 /* ServerSelectionViewController.h */,
+				75E4CCD517539639001FE307 /* ServerSelectionViewController.m */,
+				75E228DE17540D83008ABEEF /* ServiceCommandsViewController.h */,
+				75E228DF17540D83008ABEEF /* ServiceCommandsViewController.m */,
+				75E4CC9D175384C1001FE307 /* Supporting Files */,
+			);
+			path = STADialClient;
+			sourceTree = "<group>";
+		};
+		75E4CC9D175384C1001FE307 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				756E1DEF17662D5000A9C03E /* Default-568h@2x.png */,
+				756E1DED1766142A00A9C03E /* sta-icon-144.png */,
+				756E1DEB1766142700A9C03E /* sta-icon-72.png */,
+				756E1DE31766135400A9C03E /* Default.png */,
+				756E1DE11766135100A9C03E /* sta-icon-114.png */,
+				756E1DDF1766134D00A9C03E /* sta-icon-57.png */,
+				75E4CC9E175384C1001FE307 /* STADialClient-Info.plist */,
+				75E4CC9F175384C1001FE307 /* InfoPlist.strings */,
+				75E4CCA2175384C1001FE307 /* main.m */,
+				75E4CCA4175384C1001FE307 /* STADialClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75E4CC92175384C1001FE307 /* STADialClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75E4CCCE175384C1001FE307 /* Build configuration list for PBXNativeTarget "STADialClient" */;
+			buildPhases = (
+				75E4CC8F175384C1001FE307 /* Sources */,
+				75E4CC90175384C1001FE307 /* Frameworks */,
+				75E4CC91175384C1001FE307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STADialClient;
+			productName = DialApp;
+			productReference = 75E4CC93175384C1001FE307 /* STADialClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75E4CC8B175384C1001FE307 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "SmartTV Alliance";
+			};
+			buildConfigurationList = 75E4CC8E175384C1001FE307 /* Build configuration list for PBXProject "STADialClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 75E4CC8A175384C1001FE307;
+			productRefGroup = 75E4CC94175384C1001FE307 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75E4CC92175384C1001FE307 /* STADialClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75E4CC91175384C1001FE307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75E4CCA1175384C1001FE307 /* InfoPlist.strings in Resources */,
+				75E4CCB0175384C1001FE307 /* MainStoryboard_iPhone.storyboard in Resources */,
+				75E4CCB3175384C1001FE307 /* MainStoryboard_iPad.storyboard in Resources */,
+				756E1DE01766134D00A9C03E /* sta-icon-57.png in Resources */,
+				756E1DE21766135100A9C03E /* sta-icon-114.png in Resources */,
+				756E1DE41766135400A9C03E /* Default.png in Resources */,
+				756E1DEC1766142700A9C03E /* sta-icon-72.png in Resources */,
+				756E1DEE1766142A00A9C03E /* sta-icon-144.png in Resources */,
+				756E1DF017662D5000A9C03E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75E4CC8F175384C1001FE307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75E4CCA3175384C1001FE307 /* main.m in Sources */,
+				75E4CCA7175384C1001FE307 /* AppDelegate.m in Sources */,
+				75E4CCD617539639001FE307 /* ServerSelectionViewController.m in Sources */,
+				75E228E017540D83008ABEEF /* ServiceCommandsViewController.m in Sources */,
+				75E228E617541417008ABEEF /* DialServiceDiscoveryClient.mm in Sources */,
+				75DB47361756746F00F577BF /* DialServiceProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		75E4CC9F175384C1001FE307 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E4CCA0175384C1001FE307 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75E4CCAE175384C1001FE307 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E4CCAF175384C1001FE307 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		75E4CCB1175384C1001FE307 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E4CCB2175384C1001FE307 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75E4CCCC175384C1001FE307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75E4CCCD175384C1001FE307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75E4CCCF175384C1001FE307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "STADialClient/STADialClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "$(SRCROOT)/STADialClient/STADialClient-Info.plist";
+				PRODUCT_NAME = STADialClient;
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/** $(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75E4CCD0175384C1001FE307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "STADialClient/STADialClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "$(SRCROOT)/STADialClient/STADialClient-Info.plist";
+				PRODUCT_NAME = STADialClient;
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/** $(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75E4CC8E175384C1001FE307 /* Build configuration list for PBXProject "STADialClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75E4CCCC175384C1001FE307 /* Debug */,
+				75E4CCCD175384C1001FE307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75E4CCCE175384C1001FE307 /* Build configuration list for PBXNativeTarget "STADialClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75E4CCCF175384C1001FE307 /* Debug */,
+				75E4CCD0175384C1001FE307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75E4CC8B175384C1001FE307 /* Project object */;
+}

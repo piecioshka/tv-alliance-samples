@@ -26,10 +26,9 @@ function init(partial)
 	if (!partial)
 		{
 			document.addEventListener("keydown", keydownhandler, true);
-			if (myplatform["manufacturer"] == "LG")
+			var userAgent = navigator.userAgent;
+      if (userAgent.search(/NetCast.TV/i) > -1)
 			{
-				if (myplatform["type"].search(/NetCast.Media/i) == -1)
-				{
 				  qmenu = document.createElement('a');
 				  qmenu.setAttribute('id', 'qmenu');
 				  qmenu.setAttribute('href', "javascript:func_click('qmenu','-570px', '-240px')");
@@ -40,7 +39,6 @@ function init(partial)
 				  qmenu.onmouseover = function() { func_mouseover('qmenu','-570px', '-368px'); }
 				  qmenu.onmouseout = function() { func_mouseout('qmenu','-570px','-500px'); }
 				  document.getElementById("forward").style.navRight="#qmenu";
-				}
 			}
 		}
 
@@ -197,7 +195,8 @@ function got_clicked(id)
 				t_playcontrol=setTimeout("clear_playcontrol()",pctimeout);
 				select_qmenu=1;
 				select_play=select_rewind=select_stop=select_pause=select_forward=0;
-				if (myplatform["manufacturer"] == "LG")  
+				var userAgent = navigator.userAgent;
+        if (userAgent.search(/NetCast.TV/i) > -1) 
 				{
 				  window.NetCastLaunchQMENU();
 				}

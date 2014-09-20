@@ -15,7 +15,7 @@
 */
 
 /**
- * English
+ * Croatian
  */
 
 /**
@@ -26,7 +26,7 @@ var pageCnt = 2;
 /**
  * label string seting
  */
-var STR_VK_CLEAR = "Delete All";
+var STR_VK_CLEAR = "Izbriši sve";
 var LANG_POPUP_TITLE = "Language Selection";
 var LANG_POPUP_SELECTED_CNT = " languages are selected";
 var LANG_POPUP_MAX_SEL_DESC = "You can select no more than " + lgKb.nMaxSelLangCnt + " languages.";
@@ -43,7 +43,7 @@ var LANG_POPUP_UPPER_LIMIT_RIGHT = " languages";
  */
 function initialize() {
 	chTggIdx=0;
-	lgKb.setBtnClearFontStyle();
+	document.getElementById("wkk_key_clear").style.fontSize = "26px";
 	lgKb.setBtnClearLineHeightStyle();
 }
 
@@ -92,6 +92,7 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_012", "-");
 			lgKb.setKeyText("wkk_key_013", "=");
 			lgKb.setKeyText("wkk_key_014", " ");
+			
 			lgKb.setKeyText("wkk_key_101", "/");
 			lgKb.setKeyText("wkk_key_102", "^");
 			lgKb.setKeyText("wkk_key_103", "~");
@@ -105,35 +106,38 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_111", ";");
 			lgKb.setKeyText("wkk_key_112", "+");
 			lgKb.setKeyText("wkk_key_113", "&");
-			lgKb.setKeyText("wkk_key_114", " ");
-			lgKb.setKeyText("wkk_key_201", " ");
-			lgKb.setKeyText("wkk_key_202", "%");
-			lgKb.setKeyText("wkk_key_203", "*");
-			lgKb.setKeyText("wkk_key_204", "<");
-			lgKb.setKeyText("wkk_key_205", ">");
-			lgKb.setKeyText("wkk_key_206", "[");
-			lgKb.setKeyText("wkk_key_207", "]");
-			lgKb.setKeyText("wkk_key_208", "{");
-			lgKb.setKeyText("wkk_key_209", "}");
-			lgKb.setKeyText("wkk_key_210", ",");
-			lgKb.setKeyText("wkk_key_211", "§");
-			lgKb.setKeyText("wkk_key_212", "#");
-			lgKb.setKeyText("wkk_key_213", " ");
-			lgKb.setKeyText("wkk_key_214", " ");
-			lgKb.setKeyText("wkk_key_301", " ");
-			lgKb.setKeyText("wkk_key_302", " ");
-			lgKb.setKeyText("wkk_key_303", "¿");
-			lgKb.setKeyText("wkk_key_304", "¡");
-			lgKb.setKeyText("wkk_key_305", "£");
-			lgKb.setKeyText("wkk_key_306", "$");
-			lgKb.setKeyText("wkk_key_307", "¥");
-			lgKb.setKeyText("wkk_key_308", "＼");
-			lgKb.setKeyText("wkk_key_309", "|");
-			lgKb.setKeyText("wkk_key_310", ".");
-			lgKb.setKeyText("wkk_key_311", "@");
-			lgKb.setKeyText("wkk_key_312", "_");
+			lgKb.setKeyText("wkk_key_114", "%");
+			
+			lgKb.setKeyText("wkk_key_201", "*");
+			lgKb.setKeyText("wkk_key_202", "<");
+			lgKb.setKeyText("wkk_key_203", ">");
+			lgKb.setKeyText("wkk_key_204", "[");
+			lgKb.setKeyText("wkk_key_205", "]");
+			lgKb.setKeyText("wkk_key_206", "{");
+			lgKb.setKeyText("wkk_key_207", "}");
+			lgKb.setKeyText("wkk_key_208", ",");
+			lgKb.setKeyText("wkk_key_209", "§");
+			lgKb.setKeyText("wkk_key_210", "#");
+			lgKb.setKeyText("wkk_key_211", "¿");
+			lgKb.setKeyText("wkk_key_212", "¡");
+			lgKb.setKeyText("wkk_key_213", "€");
+			lgKb.setKeyText("wkk_key_214", "£");
+			
+			lgKb.setKeyText("wkk_key_301", "$");
+			lgKb.setKeyText("wkk_key_302", "¥");
+			lgKb.setKeyText("wkk_key_303", "￦");
+			lgKb.setKeyText("wkk_key_304", "＼");
+			lgKb.setKeyText("wkk_key_305", "|");
+			lgKb.setKeyText("wkk_key_306", ".");
+			lgKb.setKeyText("wkk_key_307", "@");
+			lgKb.setKeyText("wkk_key_308", "_");
+			lgKb.setKeyText("wkk_key_309", " ");
+			lgKb.setKeyText("wkk_key_310", " ");
+			lgKb.setKeyText("wkk_key_311", " ");
+			lgKb.setKeyText("wkk_key_312", " ");
 			lgKb.setKeyText("wkk_key_313", " ");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");
@@ -148,20 +152,21 @@ function changeKeyValue(category) {
 			lgKb.selectedCaps = "shift";
 			lgKb.nextCaps = "unshift";
 			lgKb.nextChar = "12;)";
-			lgKb.setKeyText("wkk_key_001", "~");
+			lgKb.setKeyText("wkk_key_001", "¨");
 			lgKb.setKeyText("wkk_key_002", "!");
-			lgKb.setKeyText("wkk_key_003", "@");
+			lgKb.setKeyText("wkk_key_003", '"');
 			lgKb.setKeyText("wkk_key_004", "#");
 			lgKb.setKeyText("wkk_key_005", "$");
 			lgKb.setKeyText("wkk_key_006", "%");
-			lgKb.setKeyText("wkk_key_007", "^");
-			lgKb.setKeyText("wkk_key_008", "&");
-			lgKb.setKeyText("wkk_key_009", "*");
-			lgKb.setKeyText("wkk_key_010", "(");
-			lgKb.setKeyText("wkk_key_011", ")");
-			lgKb.setKeyText("wkk_key_012", "_");
-			lgKb.setKeyText("wkk_key_013", "+");
+			lgKb.setKeyText("wkk_key_007", "&");
+			lgKb.setKeyText("wkk_key_008", "/");
+			lgKb.setKeyText("wkk_key_009", "(");
+			lgKb.setKeyText("wkk_key_010", ")");
+			lgKb.setKeyText("wkk_key_011", "=");
+			lgKb.setKeyText("wkk_key_012", "?");
+			lgKb.setKeyText("wkk_key_013", "*");
 			lgKb.setKeyText("wkk_key_014", " ");
+			
 			lgKb.setKeyText("wkk_key_101", "Q");
 			lgKb.setKeyText("wkk_key_102", "W");
 			lgKb.setKeyText("wkk_key_103", "E");
@@ -172,10 +177,11 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_108", "I");
 			lgKb.setKeyText("wkk_key_109", "O");
 			lgKb.setKeyText("wkk_key_110", "P");
-			lgKb.setKeyText("wkk_key_111", "[");
-			lgKb.setKeyText("wkk_key_112", "]");
-			lgKb.setKeyText("wkk_key_113", "|");
+			lgKb.setKeyText("wkk_key_111", "Š");
+			lgKb.setKeyText("wkk_key_112", "Ð");
+			lgKb.setKeyText("wkk_key_113", "Ž");
 			lgKb.setKeyText("wkk_key_114", " ");
+			
 			lgKb.setKeyText("wkk_key_201", " ");
 			lgKb.setKeyText("wkk_key_202", "A");
 			lgKb.setKeyText("wkk_key_203", "S");
@@ -186,10 +192,11 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_208", "J");
 			lgKb.setKeyText("wkk_key_209", "K");
 			lgKb.setKeyText("wkk_key_210", "L");
-			lgKb.setKeyText("wkk_key_211", ";");
-			lgKb.setKeyText("wkk_key_212", "'");
+			lgKb.setKeyText("wkk_key_211", "Č");
+			lgKb.setKeyText("wkk_key_212", "Ć");
 			lgKb.setKeyText("wkk_key_213", " ");
 			lgKb.setKeyText("wkk_key_214", " ");
+			
 			lgKb.setKeyText("wkk_key_301", " ");
 			lgKb.setKeyText("wkk_key_302", " ");
 			lgKb.setKeyText("wkk_key_303", "Z");
@@ -199,11 +206,12 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_307", "B");
 			lgKb.setKeyText("wkk_key_308", "N");
 			lgKb.setKeyText("wkk_key_309", "M");
-			lgKb.setKeyText("wkk_key_310", "<");
-			lgKb.setKeyText("wkk_key_311", ">");
-			lgKb.setKeyText("wkk_key_312", "?");
+			lgKb.setKeyText("wkk_key_310", ";");
+			lgKb.setKeyText("wkk_key_311", ":");
+			lgKb.setKeyText("wkk_key_312", "_");
 			lgKb.setKeyText("wkk_key_313", " ");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");
@@ -218,7 +226,7 @@ function changeKeyValue(category) {
 			lgKb.selectedCaps = "unshift";
 			lgKb.nextCaps = "shift";
 			lgKb.nextChar = "12;)";
-			lgKb.setKeyText("wkk_key_001", "`");
+			lgKb.setKeyText("wkk_key_001", "¸");
 			lgKb.setKeyText("wkk_key_002", "1");
 			lgKb.setKeyText("wkk_key_003", "2");
 			lgKb.setKeyText("wkk_key_004", "3");
@@ -229,9 +237,10 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_009", "8");
 			lgKb.setKeyText("wkk_key_010", "9");
 			lgKb.setKeyText("wkk_key_011", "0");
-			lgKb.setKeyText("wkk_key_012", "-");
-			lgKb.setKeyText("wkk_key_013", "=");
+			lgKb.setKeyText("wkk_key_012", "'");
+			lgKb.setKeyText("wkk_key_013", "+");
 			lgKb.setKeyText("wkk_key_014", " ");
+			
 			lgKb.setKeyText("wkk_key_101", "q");
 			lgKb.setKeyText("wkk_key_102", "w");
 			lgKb.setKeyText("wkk_key_103", "e");
@@ -242,10 +251,11 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_108", "i");
 			lgKb.setKeyText("wkk_key_109", "o");
 			lgKb.setKeyText("wkk_key_110", "p");
-			lgKb.setKeyText("wkk_key_111", "[");
-			lgKb.setKeyText("wkk_key_112", "]");
-			lgKb.setKeyText("wkk_key_113", "\\");
+			lgKb.setKeyText("wkk_key_111", "š");
+			lgKb.setKeyText("wkk_key_112", "ð");
+			lgKb.setKeyText("wkk_key_113", "ž");
 			lgKb.setKeyText("wkk_key_114", " ");
+			
 			lgKb.setKeyText("wkk_key_201", " ");
 			lgKb.setKeyText("wkk_key_202", "a");
 			lgKb.setKeyText("wkk_key_203", "s");
@@ -256,10 +266,11 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_208", "j");
 			lgKb.setKeyText("wkk_key_209", "k");
 			lgKb.setKeyText("wkk_key_210", "l");
-			lgKb.setKeyText("wkk_key_211", ";");
-			lgKb.setKeyText("wkk_key_212", "'");
+			lgKb.setKeyText("wkk_key_211", "č");
+			lgKb.setKeyText("wkk_key_212", "ć");
 			lgKb.setKeyText("wkk_key_213", " ");
 			lgKb.setKeyText("wkk_key_214", " ");
+			
 			lgKb.setKeyText("wkk_key_301", " ");
 			lgKb.setKeyText("wkk_key_302", " ");
 			lgKb.setKeyText("wkk_key_303", "z");
@@ -271,9 +282,10 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_309", "m");
 			lgKb.setKeyText("wkk_key_310", ",");
 			lgKb.setKeyText("wkk_key_311", ".");
-			lgKb.setKeyText("wkk_key_312", "/");
+			lgKb.setKeyText("wkk_key_312", "-");
 			lgKb.setKeyText("wkk_key_313", " ");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");

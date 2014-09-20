@@ -15,7 +15,7 @@
 */
 
 /**
- * English
+ * Hindi
  */
 
 /**
@@ -45,6 +45,7 @@ function initialize() {
 	chTggIdx=0;
 	lgKb.setBtnClearFontStyle();
 	lgKb.setBtnClearLineHeightStyle();
+	
 }
 
 
@@ -92,6 +93,7 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_012", "-");
 			lgKb.setKeyText("wkk_key_013", "=");
 			lgKb.setKeyText("wkk_key_014", " ");
+			
 			lgKb.setKeyText("wkk_key_101", "/");
 			lgKb.setKeyText("wkk_key_102", "^");
 			lgKb.setKeyText("wkk_key_103", "~");
@@ -105,35 +107,38 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_111", ";");
 			lgKb.setKeyText("wkk_key_112", "+");
 			lgKb.setKeyText("wkk_key_113", "&");
-			lgKb.setKeyText("wkk_key_114", " ");
-			lgKb.setKeyText("wkk_key_201", " ");
-			lgKb.setKeyText("wkk_key_202", "%");
-			lgKb.setKeyText("wkk_key_203", "*");
-			lgKb.setKeyText("wkk_key_204", "<");
-			lgKb.setKeyText("wkk_key_205", ">");
-			lgKb.setKeyText("wkk_key_206", "[");
-			lgKb.setKeyText("wkk_key_207", "]");
-			lgKb.setKeyText("wkk_key_208", "{");
-			lgKb.setKeyText("wkk_key_209", "}");
-			lgKb.setKeyText("wkk_key_210", ",");
-			lgKb.setKeyText("wkk_key_211", "§");
-			lgKb.setKeyText("wkk_key_212", "#");
-			lgKb.setKeyText("wkk_key_213", " ");
-			lgKb.setKeyText("wkk_key_214", " ");
-			lgKb.setKeyText("wkk_key_301", " ");
-			lgKb.setKeyText("wkk_key_302", " ");
-			lgKb.setKeyText("wkk_key_303", "¿");
-			lgKb.setKeyText("wkk_key_304", "¡");
-			lgKb.setKeyText("wkk_key_305", "£");
-			lgKb.setKeyText("wkk_key_306", "$");
-			lgKb.setKeyText("wkk_key_307", "¥");
-			lgKb.setKeyText("wkk_key_308", "＼");
-			lgKb.setKeyText("wkk_key_309", "|");
-			lgKb.setKeyText("wkk_key_310", ".");
-			lgKb.setKeyText("wkk_key_311", "@");
-			lgKb.setKeyText("wkk_key_312", "_");
+			lgKb.setKeyText("wkk_key_114", "%");
+			
+			lgKb.setKeyText("wkk_key_201", "*");
+			lgKb.setKeyText("wkk_key_202", "<");
+			lgKb.setKeyText("wkk_key_203", ">");
+			lgKb.setKeyText("wkk_key_204", "[");
+			lgKb.setKeyText("wkk_key_205", "]");
+			lgKb.setKeyText("wkk_key_206", "{");
+			lgKb.setKeyText("wkk_key_207", "}");
+			lgKb.setKeyText("wkk_key_208", ",");
+			lgKb.setKeyText("wkk_key_209", "§");
+			lgKb.setKeyText("wkk_key_210", "#");
+			lgKb.setKeyText("wkk_key_211", "¿");
+			lgKb.setKeyText("wkk_key_212", "¡");
+			lgKb.setKeyText("wkk_key_213", "€");
+			lgKb.setKeyText("wkk_key_214", "£");
+			
+			lgKb.setKeyText("wkk_key_301", "$");
+			lgKb.setKeyText("wkk_key_302", "¥");
+			lgKb.setKeyText("wkk_key_303", "￦");
+			lgKb.setKeyText("wkk_key_304", "＼");
+			lgKb.setKeyText("wkk_key_305", "|");
+			lgKb.setKeyText("wkk_key_306", ".");
+			lgKb.setKeyText("wkk_key_307", "@");
+			lgKb.setKeyText("wkk_key_308", "_");
+			lgKb.setKeyText("wkk_key_309", " ");
+			lgKb.setKeyText("wkk_key_310", " ");
+			lgKb.setKeyText("wkk_key_311", " ");
+			lgKb.setKeyText("wkk_key_312", " ");
 			lgKb.setKeyText("wkk_key_313", " ");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");
@@ -148,62 +153,66 @@ function changeKeyValue(category) {
 			lgKb.selectedCaps = "shift";
 			lgKb.nextCaps = "unshift";
 			lgKb.nextChar = "12;)";
-			lgKb.setKeyText("wkk_key_001", "~");
-			lgKb.setKeyText("wkk_key_002", "!");
-			lgKb.setKeyText("wkk_key_003", "@");
-			lgKb.setKeyText("wkk_key_004", "#");
-			lgKb.setKeyText("wkk_key_005", "$");
-			lgKb.setKeyText("wkk_key_006", "%");
-			lgKb.setKeyText("wkk_key_007", "^");
-			lgKb.setKeyText("wkk_key_008", "&");
-			lgKb.setKeyText("wkk_key_009", "*");
+			lgKb.setKeyText("wkk_key_001", "ऒ");
+			lgKb.setKeyText("wkk_key_002", "ऍ");
+			lgKb.setKeyText("wkk_key_003", "्");
+			lgKb.setKeyText("wkk_key_004", "3");
+			lgKb.setKeyText("wkk_key_005", "4");
+			lgKb.setKeyText("wkk_key_006", "स");
+			lgKb.setKeyText("wkk_key_007", "त्र");
+			lgKb.setKeyText("wkk_key_008", "ष");
+			lgKb.setKeyText("wkk_key_009", "श्र");
 			lgKb.setKeyText("wkk_key_010", "(");
 			lgKb.setKeyText("wkk_key_011", ")");
 			lgKb.setKeyText("wkk_key_012", "_");
-			lgKb.setKeyText("wkk_key_013", "+");
-			lgKb.setKeyText("wkk_key_014", " ");
-			lgKb.setKeyText("wkk_key_101", "Q");
-			lgKb.setKeyText("wkk_key_102", "W");
-			lgKb.setKeyText("wkk_key_103", "E");
-			lgKb.setKeyText("wkk_key_104", "R");
-			lgKb.setKeyText("wkk_key_105", "T");
-			lgKb.setKeyText("wkk_key_106", "Y");
-			lgKb.setKeyText("wkk_key_107", "U");
-			lgKb.setKeyText("wkk_key_108", "I");
-			lgKb.setKeyText("wkk_key_109", "O");
-			lgKb.setKeyText("wkk_key_110", "P");
-			lgKb.setKeyText("wkk_key_111", "[");
-			lgKb.setKeyText("wkk_key_112", "]");
-			lgKb.setKeyText("wkk_key_113", "|");
+			lgKb.setKeyText("wkk_key_013", "ऋ");
+			lgKb.setKeyText("wkk_key_014", "ऑ");
+			
+			lgKb.setKeyText("wkk_key_101", "औ");
+			lgKb.setKeyText("wkk_key_102", "ऐ");
+			lgKb.setKeyText("wkk_key_103", "आ");
+			lgKb.setKeyText("wkk_key_104", "ई");
+			lgKb.setKeyText("wkk_key_105", "ऊ");
+			lgKb.setKeyText("wkk_key_106", "ब");
+			lgKb.setKeyText("wkk_key_107", "ङ");
+			lgKb.setKeyText("wkk_key_108", "घ");
+			lgKb.setKeyText("wkk_key_109", "ध");
+			lgKb.setKeyText("wkk_key_110", "झ");
+			lgKb.setKeyText("wkk_key_111", "ढ");
+			lgKb.setKeyText("wkk_key_112", "ञ");
+			lgKb.setKeyText("wkk_key_113", " ");
 			lgKb.setKeyText("wkk_key_114", " ");
+			
 			lgKb.setKeyText("wkk_key_201", " ");
-			lgKb.setKeyText("wkk_key_202", "A");
-			lgKb.setKeyText("wkk_key_203", "S");
-			lgKb.setKeyText("wkk_key_204", "D");
-			lgKb.setKeyText("wkk_key_205", "F");
-			lgKb.setKeyText("wkk_key_206", "G");
-			lgKb.setKeyText("wkk_key_207", "H");
-			lgKb.setKeyText("wkk_key_208", "J");
-			lgKb.setKeyText("wkk_key_209", "K");
-			lgKb.setKeyText("wkk_key_210", "L");
-			lgKb.setKeyText("wkk_key_211", ";");
-			lgKb.setKeyText("wkk_key_212", "'");
+			lgKb.setKeyText("wkk_key_202", "ओ");
+			lgKb.setKeyText("wkk_key_203", "ए");
+			lgKb.setKeyText("wkk_key_204", "अ");
+			lgKb.setKeyText("wkk_key_205", "इ");
+			lgKb.setKeyText("wkk_key_206", "उ");
+			lgKb.setKeyText("wkk_key_207", "प");
+			lgKb.setKeyText("wkk_key_208", "ऱ");
+			lgKb.setKeyText("wkk_key_209", "ख");
+			lgKb.setKeyText("wkk_key_210", "थ");
+			lgKb.setKeyText("wkk_key_211", "छ");
+			lgKb.setKeyText("wkk_key_212", "ठ");
 			lgKb.setKeyText("wkk_key_213", " ");
 			lgKb.setKeyText("wkk_key_214", " ");
+			
 			lgKb.setKeyText("wkk_key_301", " ");
 			lgKb.setKeyText("wkk_key_302", " ");
-			lgKb.setKeyText("wkk_key_303", "Z");
-			lgKb.setKeyText("wkk_key_304", "X");
-			lgKb.setKeyText("wkk_key_305", "C");
-			lgKb.setKeyText("wkk_key_306", "V");
-			lgKb.setKeyText("wkk_key_307", "B");
-			lgKb.setKeyText("wkk_key_308", "N");
-			lgKb.setKeyText("wkk_key_309", "M");
-			lgKb.setKeyText("wkk_key_310", "<");
-			lgKb.setKeyText("wkk_key_311", ">");
-			lgKb.setKeyText("wkk_key_312", "?");
-			lgKb.setKeyText("wkk_key_313", " ");
+			lgKb.setKeyText("wkk_key_303", "ऎ");
+			lgKb.setKeyText("wkk_key_304", "्");
+			lgKb.setKeyText("wkk_key_305", "ण");
+			lgKb.setKeyText("wkk_key_306", "ऩ");
+			lgKb.setKeyText("wkk_key_307", "ऴ");
+			lgKb.setKeyText("wkk_key_308", "ऱ");
+			lgKb.setKeyText("wkk_key_309", "ळ");
+			lgKb.setKeyText("wkk_key_310", "ऴ");
+			lgKb.setKeyText("wkk_key_311", "।");
+			lgKb.setKeyText("wkk_key_312", "य़");
+			lgKb.setKeyText("wkk_key_313", "?");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");
@@ -218,7 +227,7 @@ function changeKeyValue(category) {
 			lgKb.selectedCaps = "unshift";
 			lgKb.nextCaps = "shift";
 			lgKb.nextChar = "12;)";
-			lgKb.setKeyText("wkk_key_001", "`");
+			lgKb.setKeyText("wkk_key_001", "ॊ");
 			lgKb.setKeyText("wkk_key_002", "1");
 			lgKb.setKeyText("wkk_key_003", "2");
 			lgKb.setKeyText("wkk_key_004", "3");
@@ -230,50 +239,54 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_010", "9");
 			lgKb.setKeyText("wkk_key_011", "0");
 			lgKb.setKeyText("wkk_key_012", "-");
-			lgKb.setKeyText("wkk_key_013", "=");
-			lgKb.setKeyText("wkk_key_014", " ");
-			lgKb.setKeyText("wkk_key_101", "q");
-			lgKb.setKeyText("wkk_key_102", "w");
-			lgKb.setKeyText("wkk_key_103", "e");
-			lgKb.setKeyText("wkk_key_104", "r");
-			lgKb.setKeyText("wkk_key_105", "t");
-			lgKb.setKeyText("wkk_key_106", "y");
-			lgKb.setKeyText("wkk_key_107", "u");
-			lgKb.setKeyText("wkk_key_108", "i");
-			lgKb.setKeyText("wkk_key_109", "o");
-			lgKb.setKeyText("wkk_key_110", "p");
-			lgKb.setKeyText("wkk_key_111", "[");
-			lgKb.setKeyText("wkk_key_112", "]");
-			lgKb.setKeyText("wkk_key_113", "\\");
+			lgKb.setKeyText("wkk_key_013", "ृ");
+			lgKb.setKeyText("wkk_key_014", "ॉ");
+			
+			lgKb.setKeyText("wkk_key_101", "ौ");
+			lgKb.setKeyText("wkk_key_102", "ै");
+			lgKb.setKeyText("wkk_key_103", "ा");
+			lgKb.setKeyText("wkk_key_104", "ी");
+			lgKb.setKeyText("wkk_key_105", "ू");
+			lgKb.setKeyText("wkk_key_106", "ब");
+			lgKb.setKeyText("wkk_key_107", "ह");
+			lgKb.setKeyText("wkk_key_108", "ग");
+			lgKb.setKeyText("wkk_key_109", "द");
+			lgKb.setKeyText("wkk_key_110", "ज");
+			lgKb.setKeyText("wkk_key_111", "ड");
+			lgKb.setKeyText("wkk_key_112", "़");
+			lgKb.setKeyText("wkk_key_113", "ॉ");
 			lgKb.setKeyText("wkk_key_114", " ");
+			
 			lgKb.setKeyText("wkk_key_201", " ");
-			lgKb.setKeyText("wkk_key_202", "a");
-			lgKb.setKeyText("wkk_key_203", "s");
-			lgKb.setKeyText("wkk_key_204", "d");
-			lgKb.setKeyText("wkk_key_205", "f");
-			lgKb.setKeyText("wkk_key_206", "g");
-			lgKb.setKeyText("wkk_key_207", "h");
-			lgKb.setKeyText("wkk_key_208", "j");
-			lgKb.setKeyText("wkk_key_209", "k");
-			lgKb.setKeyText("wkk_key_210", "l");
-			lgKb.setKeyText("wkk_key_211", ";");
-			lgKb.setKeyText("wkk_key_212", "'");
+			lgKb.setKeyText("wkk_key_202", "ो");
+			lgKb.setKeyText("wkk_key_203", "े");
+			lgKb.setKeyText("wkk_key_204", "्");
+			lgKb.setKeyText("wkk_key_205", "ि");
+			lgKb.setKeyText("wkk_key_206", "ु");
+			lgKb.setKeyText("wkk_key_207", "प");
+			lgKb.setKeyText("wkk_key_208", "य");
+			lgKb.setKeyText("wkk_key_209", "क");
+			lgKb.setKeyText("wkk_key_210", "त");
+			lgKb.setKeyText("wkk_key_211", "च");
+			lgKb.setKeyText("wkk_key_212", "ट");
 			lgKb.setKeyText("wkk_key_213", " ");
 			lgKb.setKeyText("wkk_key_214", " ");
+			
 			lgKb.setKeyText("wkk_key_301", " ");
 			lgKb.setKeyText("wkk_key_302", " ");
-			lgKb.setKeyText("wkk_key_303", "z");
-			lgKb.setKeyText("wkk_key_304", "x");
-			lgKb.setKeyText("wkk_key_305", "c");
-			lgKb.setKeyText("wkk_key_306", "v");
-			lgKb.setKeyText("wkk_key_307", "b");
-			lgKb.setKeyText("wkk_key_308", "n");
-			lgKb.setKeyText("wkk_key_309", "m");
+			lgKb.setKeyText("wkk_key_303", "ॆ");
+			lgKb.setKeyText("wkk_key_304", "ं");
+			lgKb.setKeyText("wkk_key_305", "भ");
+			lgKb.setKeyText("wkk_key_306", "न");
+			lgKb.setKeyText("wkk_key_307", "ल");
+			lgKb.setKeyText("wkk_key_308", "र");
+			lgKb.setKeyText("wkk_key_309", "व");
 			lgKb.setKeyText("wkk_key_310", ",");
 			lgKb.setKeyText("wkk_key_311", ".");
-			lgKb.setKeyText("wkk_key_312", "/");
-			lgKb.setKeyText("wkk_key_313", " ");
+			lgKb.setKeyText("wkk_key_312", "म");
+			lgKb.setKeyText("wkk_key_313", "/");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");

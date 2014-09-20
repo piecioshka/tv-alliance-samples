@@ -2,9 +2,8 @@
 //   LCD TV LABORATORY, LG ELECTRONICS INC., SEOUL, KOREA
 //   Copyright(c) 2009 by LG Electronics Inc.
 //
-//   All rights reserved. No part of this work may be reproduced, stored in a
-//   retrieval system, or transmitted by any means without prior written
-//   permission of LG Electronics Inc.
+//   All rights reserved. Only for LG Smart TV Applications, Parts of this work can be reproduced,
+//	 stored in a retrieval system, or transmitted by any means without prior written permission of LG Electronics Inc.
 //
 //   Following key definitions and value assignments are for Netcast Browser.
 //   
@@ -27,6 +26,7 @@ var VK_HID_DEL					= 46;
 var VK_HID_ESC					= 461;
 var VK_HID_CTRL					= 17;
 var VK_HID_ALT					= 18;
+var VK_HID_RT_ALT				= 21;
 
 var VK_CAPS_LOCK				= 20;
 var VK_SHIFT					= 16;
@@ -105,4 +105,4 @@ var VK_PLAY						= 415;
 var VK_FAST_FWD					= 417;
 var VK_INFO						= 457;
 var VK_BACK						= 461;
-
+var VK_LGE_MAGIC_VOICE			= 1015;

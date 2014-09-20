@@ -1,4 +1,4 @@
-/*
+﻿/*
 	 LCD TV LABORATORY, LG ELECTRONICS INC., SEOUL, KOREA
 	 Copyright(c) 2010 by LG Electronics Inc.
 
@@ -15,7 +15,7 @@
 */
 
 /**
- * English
+ * Albanian
  */
 
 /**
@@ -26,7 +26,7 @@ var pageCnt = 2;
 /**
  * label string seting
  */
-var STR_VK_CLEAR = "Delete All";
+var STR_VK_CLEAR = "ลบทั้งหมด";
 var LANG_POPUP_TITLE = "Language Selection";
 var LANG_POPUP_SELECTED_CNT = " languages are selected";
 var LANG_POPUP_MAX_SEL_DESC = "You can select no more than " + lgKb.nMaxSelLangCnt + " languages.";
@@ -43,7 +43,7 @@ var LANG_POPUP_UPPER_LIMIT_RIGHT = " languages";
  */
 function initialize() {
 	chTggIdx=0;
-	lgKb.setBtnClearFontStyle();
+	document.getElementById("wkk_key_clear").style.fontSize = "26px";
 	lgKb.setBtnClearLineHeightStyle();
 }
 
@@ -92,12 +92,13 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_012", "-");
 			lgKb.setKeyText("wkk_key_013", "=");
 			lgKb.setKeyText("wkk_key_014", " ");
+			
 			lgKb.setKeyText("wkk_key_101", "/");
 			lgKb.setKeyText("wkk_key_102", "^");
 			lgKb.setKeyText("wkk_key_103", "~");
 			lgKb.setKeyText("wkk_key_104", "?");
 			lgKb.setKeyText("wkk_key_105", "!");
-			lgKb.setKeyText("wkk_key_106", "\'");
+			lgKb.setKeyText("wkk_key_106", "'");
 			lgKb.setKeyText("wkk_key_107", "\"");
 			lgKb.setKeyText("wkk_key_108", "(");
 			lgKb.setKeyText("wkk_key_109", ")");
@@ -105,35 +106,38 @@ function changeKeyValue(category) {
 			lgKb.setKeyText("wkk_key_111", ";");
 			lgKb.setKeyText("wkk_key_112", "+");
 			lgKb.setKeyText("wkk_key_113", "&");
-			lgKb.setKeyText("wkk_key_114", " ");
-			lgKb.setKeyText("wkk_key_201", " ");
-			lgKb.setKeyText("wkk_key_202", "%");
-			lgKb.setKeyText("wkk_key_203", "*");
-			lgKb.setKeyText("wkk_key_204", "<");
-			lgKb.setKeyText("wkk_key_205", ">");
-			lgKb.setKeyText("wkk_key_206", "[");
-			lgKb.setKeyText("wkk_key_207", "]");
-			lgKb.setKeyText("wkk_key_208", "{");
-			lgKb.setKeyText("wkk_key_209", "}");
-			lgKb.setKeyText("wkk_key_210", ",");
-			lgKb.setKeyText("wkk_key_211", "§");
-			lgKb.setKeyText("wkk_key_212", "#");
-			lgKb.setKeyText("wkk_key_213", " ");
-			lgKb.setKeyText("wkk_key_214", " ");
-			lgKb.setKeyText("wkk_key_301", " ");
-			lgKb.setKeyText("wkk_key_302", " ");
-			lgKb.setKeyText("wkk_key_303", "¿");
-			lgKb.setKeyText("wkk_key_304", "¡");
-			lgKb.setKeyText("wkk_key_305", "£");
-			lgKb.setKeyText("wkk_key_306", "$");
-			lgKb.setKeyText("wkk_key_307", "¥");
-			lgKb.setKeyText("wkk_key_308", "＼");
-			lgKb.setKeyText("wkk_key_309", "|");
-			lgKb.setKeyText("wkk_key_310", ".");
-			lgKb.setKeyText("wkk_key_311", "@");
-			lgKb.setKeyText("wkk_key_312", "_");
+			lgKb.setKeyText("wkk_key_114", "%");
+			
+			lgKb.setKeyText("wkk_key_201", "*");
+			lgKb.setKeyText("wkk_key_202", "<");
+			lgKb.setKeyText("wkk_key_203", ">");
+			lgKb.setKeyText("wkk_key_204", "[");
+			lgKb.setKeyText("wkk_key_205", "]");
+			lgKb.setKeyText("wkk_key_206", "{");
+			lgKb.setKeyText("wkk_key_207", "}");
+			lgKb.setKeyText("wkk_key_208", ",");
+			lgKb.setKeyText("wkk_key_209", "§");
+			lgKb.setKeyText("wkk_key_210", "#");
+			lgKb.setKeyText("wkk_key_211", "¿");
+			lgKb.setKeyText("wkk_key_212", "¡");
+			lgKb.setKeyText("wkk_key_213", "€");
+			lgKb.setKeyText("wkk_key_214", "£");
+			
+			lgKb.setKeyText("wkk_key_301", "$");
+			lgKb.setKeyText("wkk_key_302", "¥");
+			lgKb.setKeyText("wkk_key_303", "￦");
+			lgKb.setKeyText("wkk_key_304", "＼");
+			lgKb.setKeyText("wkk_key_305", "|");
+			lgKb.setKeyText("wkk_key_306", ".");
+			lgKb.setKeyText("wkk_key_307", "@");
+			lgKb.setKeyText("wkk_key_308", "_");
+			lgKb.setKeyText("wkk_key_309", " ");
+			lgKb.setKeyText("wkk_key_310", " ");
+			lgKb.setKeyText("wkk_key_311", " ");
+			lgKb.setKeyText("wkk_key_312", " ");
 			lgKb.setKeyText("wkk_key_313", " ");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");
@@ -148,62 +152,66 @@ function changeKeyValue(category) {
 			lgKb.selectedCaps = "shift";
 			lgKb.nextCaps = "unshift";
 			lgKb.nextChar = "12;)";
-			lgKb.setKeyText("wkk_key_001", "~");
-			lgKb.setKeyText("wkk_key_002", "!");
-			lgKb.setKeyText("wkk_key_003", "@");
-			lgKb.setKeyText("wkk_key_004", "#");
-			lgKb.setKeyText("wkk_key_005", "$");
-			lgKb.setKeyText("wkk_key_006", "%");
-			lgKb.setKeyText("wkk_key_007", "^");
-			lgKb.setKeyText("wkk_key_008", "&");
-			lgKb.setKeyText("wkk_key_009", "*");
-			lgKb.setKeyText("wkk_key_010", "(");
-			lgKb.setKeyText("wkk_key_011", ")");
-			lgKb.setKeyText("wkk_key_012", "_");
-			lgKb.setKeyText("wkk_key_013", "+");
+			lgKb.setKeyText("wkk_key_001", "%");
+			lgKb.setKeyText("wkk_key_002", "+");
+			lgKb.setKeyText("wkk_key_003", "1");
+			lgKb.setKeyText("wkk_key_004", "2");
+			lgKb.setKeyText("wkk_key_005", "3");
+			lgKb.setKeyText("wkk_key_006", "4");
+			lgKb.setKeyText("wkk_key_007", "◌ู");
+			lgKb.setKeyText("wkk_key_008", "฿");
+			lgKb.setKeyText("wkk_key_009", "5");
+			lgKb.setKeyText("wkk_key_010", "6");
+			lgKb.setKeyText("wkk_key_011", "7");
+			lgKb.setKeyText("wkk_key_012", "8");
+			lgKb.setKeyText("wkk_key_013", "9");
 			lgKb.setKeyText("wkk_key_014", " ");
-			lgKb.setKeyText("wkk_key_101", "Q");
-			lgKb.setKeyText("wkk_key_102", "W");
-			lgKb.setKeyText("wkk_key_103", "E");
-			lgKb.setKeyText("wkk_key_104", "R");
-			lgKb.setKeyText("wkk_key_105", "T");
-			lgKb.setKeyText("wkk_key_106", "Y");
-			lgKb.setKeyText("wkk_key_107", "U");
-			lgKb.setKeyText("wkk_key_108", "I");
-			lgKb.setKeyText("wkk_key_109", "O");
-			lgKb.setKeyText("wkk_key_110", "P");
-			lgKb.setKeyText("wkk_key_111", "[");
-			lgKb.setKeyText("wkk_key_112", "]");
-			lgKb.setKeyText("wkk_key_113", "|");
+			
+			lgKb.setKeyText("wkk_key_101", "0");
+			lgKb.setKeyText("wkk_key_102", '"');
+			lgKb.setKeyText("wkk_key_103", "ฎ");
+			lgKb.setKeyText("wkk_key_104", "ฑ");
+			lgKb.setKeyText("wkk_key_105", "ธ");
+			lgKb.setKeyText("wkk_key_106", "◌ํ");
+			lgKb.setKeyText("wkk_key_107", "◌๊");
+			lgKb.setKeyText("wkk_key_108", "ณ");
+			lgKb.setKeyText("wkk_key_109", "ฯ");
+			lgKb.setKeyText("wkk_key_110", "ญ");
+			lgKb.setKeyText("wkk_key_111", "ฐ");
+			lgKb.setKeyText("wkk_key_112", ",");
+			lgKb.setKeyText("wkk_key_113", "ฅ");
 			lgKb.setKeyText("wkk_key_114", " ");
+			
 			lgKb.setKeyText("wkk_key_201", " ");
-			lgKb.setKeyText("wkk_key_202", "A");
-			lgKb.setKeyText("wkk_key_203", "S");
-			lgKb.setKeyText("wkk_key_204", "D");
-			lgKb.setKeyText("wkk_key_205", "F");
-			lgKb.setKeyText("wkk_key_206", "G");
-			lgKb.setKeyText("wkk_key_207", "H");
-			lgKb.setKeyText("wkk_key_208", "J");
-			lgKb.setKeyText("wkk_key_209", "K");
-			lgKb.setKeyText("wkk_key_210", "L");
-			lgKb.setKeyText("wkk_key_211", ";");
-			lgKb.setKeyText("wkk_key_212", "'");
+			lgKb.setKeyText("wkk_key_202", "ฤ");
+			lgKb.setKeyText("wkk_key_203", "ฆ");
+			lgKb.setKeyText("wkk_key_204", "ฏ");
+			lgKb.setKeyText("wkk_key_205", "โ");
+			lgKb.setKeyText("wkk_key_206", "ฌ");
+			lgKb.setKeyText("wkk_key_207", "◌็");
+			lgKb.setKeyText("wkk_key_208", "◌๋");
+			lgKb.setKeyText("wkk_key_209", "ษ");
+			lgKb.setKeyText("wkk_key_210", "ศ");
+			lgKb.setKeyText("wkk_key_211", "ซ");
+			lgKb.setKeyText("wkk_key_212", ".");
 			lgKb.setKeyText("wkk_key_213", " ");
 			lgKb.setKeyText("wkk_key_214", " ");
+			
 			lgKb.setKeyText("wkk_key_301", " ");
 			lgKb.setKeyText("wkk_key_302", " ");
-			lgKb.setKeyText("wkk_key_303", "Z");
-			lgKb.setKeyText("wkk_key_304", "X");
-			lgKb.setKeyText("wkk_key_305", "C");
-			lgKb.setKeyText("wkk_key_306", "V");
-			lgKb.setKeyText("wkk_key_307", "B");
-			lgKb.setKeyText("wkk_key_308", "N");
-			lgKb.setKeyText("wkk_key_309", "M");
-			lgKb.setKeyText("wkk_key_310", "<");
-			lgKb.setKeyText("wkk_key_311", ">");
-			lgKb.setKeyText("wkk_key_312", "?");
+			lgKb.setKeyText("wkk_key_303", "(");
+			lgKb.setKeyText("wkk_key_304", ")");
+			lgKb.setKeyText("wkk_key_305", "ฉ");
+			lgKb.setKeyText("wkk_key_306", "ฮ");
+			lgKb.setKeyText("wkk_key_307", "◌ฺ");
+			lgKb.setKeyText("wkk_key_308", "◌์");
+			lgKb.setKeyText("wkk_key_309", "?");
+			lgKb.setKeyText("wkk_key_310", "ฒ");
+			lgKb.setKeyText("wkk_key_311", "ฬ");
+			lgKb.setKeyText("wkk_key_312", "ฦ");
 			lgKb.setKeyText("wkk_key_313", " ");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");
@@ -218,62 +226,66 @@ function changeKeyValue(category) {
 			lgKb.selectedCaps = "unshift";
 			lgKb.nextCaps = "shift";
 			lgKb.nextChar = "12;)";
-			lgKb.setKeyText("wkk_key_001", "`");
-			lgKb.setKeyText("wkk_key_002", "1");
-			lgKb.setKeyText("wkk_key_003", "2");
-			lgKb.setKeyText("wkk_key_004", "3");
-			lgKb.setKeyText("wkk_key_005", "4");
-			lgKb.setKeyText("wkk_key_006", "5");
-			lgKb.setKeyText("wkk_key_007", "6");
-			lgKb.setKeyText("wkk_key_008", "7");
-			lgKb.setKeyText("wkk_key_009", "8");
-			lgKb.setKeyText("wkk_key_010", "9");
-			lgKb.setKeyText("wkk_key_011", "0");
-			lgKb.setKeyText("wkk_key_012", "-");
-			lgKb.setKeyText("wkk_key_013", "=");
+			lgKb.setKeyText("wkk_key_001", " ");
+			lgKb.setKeyText("wkk_key_002", "ๅ");
+			lgKb.setKeyText("wkk_key_003", "/");
+			lgKb.setKeyText("wkk_key_004", "-");
+			lgKb.setKeyText("wkk_key_005", "ถ");
+			lgKb.setKeyText("wkk_key_006", "ภ");
+			lgKb.setKeyText("wkk_key_007", "◌ุ");
+			lgKb.setKeyText("wkk_key_008", "◌ี");
+			lgKb.setKeyText("wkk_key_009", "ค");
+			lgKb.setKeyText("wkk_key_010", "ต");
+			lgKb.setKeyText("wkk_key_011", "จ");
+			lgKb.setKeyText("wkk_key_012", "ข");
+			lgKb.setKeyText("wkk_key_013", "ช");
 			lgKb.setKeyText("wkk_key_014", " ");
-			lgKb.setKeyText("wkk_key_101", "q");
-			lgKb.setKeyText("wkk_key_102", "w");
-			lgKb.setKeyText("wkk_key_103", "e");
-			lgKb.setKeyText("wkk_key_104", "r");
-			lgKb.setKeyText("wkk_key_105", "t");
-			lgKb.setKeyText("wkk_key_106", "y");
-			lgKb.setKeyText("wkk_key_107", "u");
-			lgKb.setKeyText("wkk_key_108", "i");
-			lgKb.setKeyText("wkk_key_109", "o");
-			lgKb.setKeyText("wkk_key_110", "p");
-			lgKb.setKeyText("wkk_key_111", "[");
-			lgKb.setKeyText("wkk_key_112", "]");
-			lgKb.setKeyText("wkk_key_113", "\\");
+			
+			lgKb.setKeyText("wkk_key_101", "ๆ");
+			lgKb.setKeyText("wkk_key_102", "ไ");
+			lgKb.setKeyText("wkk_key_103", "◌ำ");
+			lgKb.setKeyText("wkk_key_104", "พ");
+			lgKb.setKeyText("wkk_key_105", "ะ");
+			lgKb.setKeyText("wkk_key_106", "◌ั");
+			lgKb.setKeyText("wkk_key_107", "◌ี");
+			lgKb.setKeyText("wkk_key_108", "ร");
+			lgKb.setKeyText("wkk_key_109", "น");
+			lgKb.setKeyText("wkk_key_110", "ย");
+			lgKb.setKeyText("wkk_key_111", "บ");
+			lgKb.setKeyText("wkk_key_112", "ล");
+			lgKb.setKeyText("wkk_key_113", "ฃ");
 			lgKb.setKeyText("wkk_key_114", " ");
+			
 			lgKb.setKeyText("wkk_key_201", " ");
-			lgKb.setKeyText("wkk_key_202", "a");
-			lgKb.setKeyText("wkk_key_203", "s");
-			lgKb.setKeyText("wkk_key_204", "d");
-			lgKb.setKeyText("wkk_key_205", "f");
-			lgKb.setKeyText("wkk_key_206", "g");
-			lgKb.setKeyText("wkk_key_207", "h");
-			lgKb.setKeyText("wkk_key_208", "j");
-			lgKb.setKeyText("wkk_key_209", "k");
-			lgKb.setKeyText("wkk_key_210", "l");
-			lgKb.setKeyText("wkk_key_211", ";");
-			lgKb.setKeyText("wkk_key_212", "'");
+			lgKb.setKeyText("wkk_key_202", "ฟ");
+			lgKb.setKeyText("wkk_key_203", "ห");
+			lgKb.setKeyText("wkk_key_204", "ก");
+			lgKb.setKeyText("wkk_key_205", "ด");
+			lgKb.setKeyText("wkk_key_206", "เ");
+			lgKb.setKeyText("wkk_key_207", "◌้");
+			lgKb.setKeyText("wkk_key_208", "◌่");
+			lgKb.setKeyText("wkk_key_209", "า");
+			lgKb.setKeyText("wkk_key_210", "ส");
+			lgKb.setKeyText("wkk_key_211", "ว");
+			lgKb.setKeyText("wkk_key_212", "ง");
 			lgKb.setKeyText("wkk_key_213", " ");
 			lgKb.setKeyText("wkk_key_214", " ");
+			
 			lgKb.setKeyText("wkk_key_301", " ");
 			lgKb.setKeyText("wkk_key_302", " ");
-			lgKb.setKeyText("wkk_key_303", "z");
-			lgKb.setKeyText("wkk_key_304", "x");
-			lgKb.setKeyText("wkk_key_305", "c");
-			lgKb.setKeyText("wkk_key_306", "v");
-			lgKb.setKeyText("wkk_key_307", "b");
-			lgKb.setKeyText("wkk_key_308", "n");
-			lgKb.setKeyText("wkk_key_309", "m");
-			lgKb.setKeyText("wkk_key_310", ",");
-			lgKb.setKeyText("wkk_key_311", ".");
-			lgKb.setKeyText("wkk_key_312", "/");
+			lgKb.setKeyText("wkk_key_303", "ผ");
+			lgKb.setKeyText("wkk_key_304", "ป");
+			lgKb.setKeyText("wkk_key_305", "แ");
+			lgKb.setKeyText("wkk_key_306", "อ");
+			lgKb.setKeyText("wkk_key_307", "◌ิ");
+			lgKb.setKeyText("wkk_key_308", "◌ื");
+			lgKb.setKeyText("wkk_key_309", "ท");
+			lgKb.setKeyText("wkk_key_310", "ม");
+			lgKb.setKeyText("wkk_key_311", "ใ");
+			lgKb.setKeyText("wkk_key_312", "ฝ");
 			lgKb.setKeyText("wkk_key_313", " ");
 			lgKb.setKeyText("wkk_key_314", " ");
+			
 			lgKb.setKeyText("wkk_key_401", "http://");
 			lgKb.setKeyText("wkk_key_402", "www.");
 			lgKb.setKeyText("wkk_key_403", ".com");
@@ -321,7 +333,7 @@ function appendText(key) {
 		if(content == " ") {
 			lgKb.addStrIntoFld(" ", true);
 		} else {
-			lgKb.addStrIntoFld(content, true);
+			lgKb.addStrIntoFld(content.replace(/◌/g, ""), true);
 		}
 	}
 
